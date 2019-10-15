@@ -2,14 +2,15 @@
 circle:hover{
   fill:blue;
   transition-duration: 1s;
+  stroke:blue;
 }
 circle{
   cursor: crosshair;
   opacity:1;
   fill:transparent;
   fill-opacity:0.3;
-  /*stroke:#000000;
   stroke-width:0.5;
+  /*stroke:#000000;
   stroke-linecap:round;
   stroke-linejoin:miter;
   stroke-miterlimit:4;
