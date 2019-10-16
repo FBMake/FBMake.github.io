@@ -7,7 +7,9 @@ g:hover circle{
 }
 
 g:hover text{
-  visibility: visible;
+  stroke:blue;
+  fill:white;
+  fill-opacity:0.3;
 
 }
 
@@ -32,7 +34,6 @@ circle{
 text{
   visibility: hidden;
   font-family: fantasy;
-  stroke:blue;
-  fill:white;
-  fill-opacity:0.3;
+  fill:transparent;
+  
 }
