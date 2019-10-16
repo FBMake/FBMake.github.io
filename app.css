@@ -1,9 +1,18 @@
 
-circle:hover{
+g:hover circle{
   fill:blue;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   stroke:blue;
+
 }
+
+g:hover text{
+  visibility: visible;
+  transition-duration: 0.5s;
+}
+
+
+
 circle{
   cursor: crosshair;
   opacity:1;
@@ -18,4 +27,12 @@ circle{
   stroke-dashoffset:0;
   stroke-opacity:1;*/
 
+}
+
+text{
+  visibility: hidden;
+  font-family: fantasy;
+  stroke:blue;
+  fill:white;
+  fill-opacity:0.3;
 }
