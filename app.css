@@ -11,6 +11,11 @@ g:hover text{
   transition-duration: 0.5s;
 }
 
+g:hover .sous{
+  fill:white;
+  fill-opacity:0.5;
+}
+
 
 
 circle{
