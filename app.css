@@ -34,5 +34,5 @@ text{
   font-family: fantasy;
   stroke:blue;
   fill:white;
-  fill-opacity:0.3;
+  stroke-width:0.3;
 }
