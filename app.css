@@ -43,11 +43,11 @@ circle{
 text{
   visibility: hidden;
   font-family: fantasy;
+  font-size: smaller;
   stroke:blue;
   fill:blue;
   stroke-width:0.3;
   fill-opacity:0.5;
-  font-size: small;
 }
 
 rect{
@@ -59,4 +59,8 @@ rect{
 
 #image886{
     visibility: hidden;
+}
+
+a{
+  position: absolute;
 }
