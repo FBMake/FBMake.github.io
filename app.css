@@ -67,6 +67,7 @@ svg{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  fon
 }
 
 g:hover circle{
@@ -112,8 +113,9 @@ circle{
 
 text{
   visibility: hidden;
-  font-family: fantasy;
-  font-size: smaller;
+  font-family: "Open Sans", 'Roboto',Helvetica, sans-serif;
+  font-size: x-small;
+  text-align: justify;
   stroke:blue;
   fill:blue;
   stroke-width:0.3;
@@ -130,6 +132,7 @@ rect{
 #image886{
     visibility: hidden;
 }
+
 
 
 @media screen and (max-width: 600px){
