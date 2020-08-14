@@ -133,7 +133,7 @@ rect{
 
 
 
-@media screen and (max-width: 600px){
+@media all and (max-width: 600px){
   nav li{
     width: 20%;
   }
