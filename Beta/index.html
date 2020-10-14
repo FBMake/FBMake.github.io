@@ -32,6 +32,11 @@
           integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ=="
           crossorigin=""
         ></script>
+
+        <!-- Load Easy Button -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
     </head>
 
     <body onload="initialize()">
@@ -91,7 +96,11 @@
           }
         });
 
+        //Bp localisation
 
+        L.easyButton('<img src="src/localisation.png">', function(btn, map){
+            map.locate({setView: true, maxZoom: 12});
+        }).addTo(map);
 
         //VFHN Marker
 
@@ -118,7 +127,7 @@
         function onLocationFound(e) {
             var radius = e.accuracy;
 
-            L.marker(e.latlng).addTo(map).bindPopup("Vous êtes ici").openPopup();
+            L.marker(e.latlng).addTo(map).bindPopup("Vous êtes ici");
 
 
         }
