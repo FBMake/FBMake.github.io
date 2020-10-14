@@ -64,6 +64,19 @@ html, body {
   width: 100%;
 }
 
+/* popup */
+
+div.leaflet-popup-tip,
+div.leaflet-popup-content-wrapper {
+    background: #009fe3;
+    color: #ffffff;
+  }
+
+div.leaflet-popup-content {
+  font-family:'Roboto',Helvetica, sans-serif;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 600px){
   nav li{
     width: 20%;
