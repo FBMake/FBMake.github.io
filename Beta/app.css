@@ -1,0 +1,77 @@
+
+/* Initialisation */
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", 'Roboto',Helvetica, sans-serif;
+}
+
+
+/*    Header    */
+nav{
+  margin: 0;
+  padding: 0;
+  background-color: #004289;
+}
+nav H2{
+  color: #FFFFFF;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-size: 2em;
+}
+nav ul{
+  background-color: #004289;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  margin: 0;
+  padding-left: 10px;
+  border-right: 1px solid #009fe3;
+  text-align: left;
+  line-height: 40px;
+}
+
+nav li:hover{
+  background-color: #009fe3;
+}
+
+nav a{
+  display: block;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* Map */
+
+html, body {
+  height: 100%;
+  width: 100vw;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px){
+  nav li{
+    width: 20%;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  }
+
+}
