@@ -33,6 +33,10 @@
           crossorigin=""
         ></script>
 
+        <!-- Load Easy Button -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
     </head>
 
 
@@ -91,6 +95,12 @@
           }
         });
 
+        //Bp localisation
+
+        L.easyButton('<img src="src/localisation.png">', function(btn, map){
+            map.locate({setView: true, maxZoom: 12});
+        }).addTo(map);
+
         //VFHN Marker
 
 
@@ -113,7 +123,21 @@
 
         //Search
 
+        function onLocationFound(e) {
+            var radius = e.accuracy;
 
+            L.marker(e.latlng).addTo(map);
+
+
+        }
+        map.on('locationfound', onLocationFound);
+
+        function onLocationError(e) {
+            alert("Vous avez refusé la localisation !");    //e.message
+        }
+
+        map.on('locationerror', onLocationError);
 
     }
+
 </script>
