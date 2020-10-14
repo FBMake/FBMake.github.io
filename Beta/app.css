@@ -70,6 +70,7 @@ div.leaflet-popup-tip,
 div.leaflet-popup-content-wrapper {
     background: #009fe3;
     color: #ffffff;
+    opacity: 0.5;
   }
 
 div.leaflet-popup-content {
