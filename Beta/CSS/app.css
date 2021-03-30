@@ -1,18 +1,23 @@
 
 /* Initialisation */
-
-body{
+*{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto',Helvetica, sans-serif;
 }
 
+body{
+  font-family: 'Roboto',Helvetica, sans-serif;
+}
 
 /*    Header    */
 nav{
   margin: 0;
   padding: 0;
   background-color: #004289;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 nav H2{
   color: #FFFFFF;
@@ -60,15 +65,14 @@ nav a{
 
 /* Map */
 
-html, body {
-  height: 100%;
-  width: 100vw;
-}
+
 
 #map {
-  height: 100%;
-  width: 100%;
+  margin: 5px;
+  height: 85vh;
   z-index: 10;
+  top: 0;
+  bottom: 0;
 }
 
 /* popup */
@@ -86,8 +90,8 @@ div.leaflet-popup-content {
 }
 
 @media screen and (max-width: 650px){
-  body{
-    overflow-x: hidden;
+  nav{
+    height: 40px;
   }
 
   .navHead{
@@ -140,6 +144,10 @@ div.leaflet-popup-content {
 
   nav a{
     word-break: keep-all;
+  }
+
+  .map{
+    height: 100vh;
   }
 
 }
