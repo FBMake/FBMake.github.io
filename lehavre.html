@@ -109,7 +109,7 @@
             const result = data.results[i];
             const marker = L.marker(result.latlng);
             markers = [...markers, L.marker(marker)];
-            results.addLayer(marker);
+            results.addLayer(marker.bindPopup(data.text));
           }
         });
 
@@ -127,17 +127,17 @@
         L.marker([49.487084, 0.147129], { icon: VFico }).addTo(map)
     .bindPopup('VHFN Le Havre');
         L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 120000}).addTo(map).bindPopup('Zone 12');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 110000}).addTo(map).bindPopup('Zone 11');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 100000}).addTo(map).bindPopup('Zone 10');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 90000}).addTo(map).bindPopup('Zone 09');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 80000}).addTo(map).bindPopup('Zone 08');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 70000}).addTo(map).bindPopup('Zone 07');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 60000}).addTo(map).bindPopup('Zone 06');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 50000}).addTo(map).bindPopup('Zone 05');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 40000}).addTo(map).bindPopup('Zone 04');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 30000}).addTo(map).bindPopup('Zone 03');
-        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0,fillOpacity: 0, radius: 20000}).addTo(map).bindPopup('Zone 02');
-        L.circle([49.487084, 0.147129], {color: "#f03",opacity: 0,fillOpacity: 0, radius: 10000}).addTo(map).bindPopup('Zone 01');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 110000}).addTo(map).bindPopup('Zone 11');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 100000}).addTo(map).bindPopup('Zone 10');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 90000}).addTo(map).bindPopup('Zone 09');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 80000}).addTo(map).bindPopup('Zone 08');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 70000}).addTo(map).bindPopup('Zone 07');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 60000}).addTo(map).bindPopup('Zone 06');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 50000}).addTo(map).bindPopup('Zone 05');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 40000}).addTo(map).bindPopup('Zone 04');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 30000}).addTo(map).bindPopup('Zone 03');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 20000}).addTo(map).bindPopup('Zone 02');
+        L.circle([49.487084, 0.147129], {color: "#f03",opacity: 0.2,fillOpacity: 0, radius: 10000}).addTo(map).bindPopup('Zone 01');
 
         //Search
 
