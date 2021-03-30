@@ -89,6 +89,8 @@ div.leaflet-popup-content {
   font-size: 20px;
 }
 
+
+
 @media screen and (max-width: 650px){
   nav{
     height: 40px;
