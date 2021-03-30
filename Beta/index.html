@@ -100,7 +100,7 @@
   
           const searchControl = L.esri.Geocoding.geosearch().addTo(map);
   
-          const results = L.layerGroup().addTo(map).bindPopup('Zone 06');
+          const results = L.layerGroup().addTo(map);
   
           let markers = [];
   
@@ -113,7 +113,7 @@
               const result = data.results[i];
               const marker = L.marker(result.latlng);
               markers = [...markers, L.marker(marker)];
-              results.addLayer(marker);
+              results.addLayer(marker.bindPopup(data.text));
             }
           });
           
