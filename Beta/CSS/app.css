@@ -4,8 +4,7 @@
 body{
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", 'Roboto',Helvetica, sans-serif;
-  overflow: hidden;
+  font-family: 'Roboto',Helvetica, sans-serif;
 }
 
 
@@ -22,7 +21,14 @@ nav H2{
   margin-bottom: 5px;
   font-size: 2em;
 }
-nav ul{
+
+.buttonMenu{
+  margin: 0;
+  height: 0;
+  width: 0;
+  fill: #FFFFFF;
+}
+.menu{
   background-color: #004289;
   list-style-type: none;
   padding: 0;
@@ -62,6 +68,7 @@ html, body {
 #map {
   height: 100%;
   width: 100%;
+  z-index: 10;
 }
 
 /* popup */
@@ -78,15 +85,61 @@ div.leaflet-popup-content {
   font-size: 20px;
 }
 
-@media screen and (max-width: 600px){
-  nav li{
-    width: 20%;
+@media screen and (max-width: 650px){
+  body{
+    overflow-x: hidden;
   }
 
-  #map {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
+  .navHead{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  .navHead h2{
+    margin-right: 10px;
+  }
+
+  .buttonMenu{
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+    top: 0;
+  }
+
+  .rotateButton{
+    transform: rotate(90deg);
+    transition: transform 0.5 ease;
+  }
+
+  .menu{
+    position: absolute;
+    margin-top: 0;
+    top: -200px;
+    transition: opacity 1s ease;
+    opacity: 0;
+    z-index: 100;
+  }
+
+  .down{
+    top: 35px;
+    transition: opacity 1s ease;
+    opacity: 1;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li{
+    width: auto;
+    padding: 5px 30px 5px 10px;
+    border-right: none;
+  }
+
+  nav a{
+    word-break: keep-all;
   }
 
 }

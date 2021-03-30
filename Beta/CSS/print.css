@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: normal;
+    /* pour imprimer les couleur */
+    -webkit-print-color-adjust: exact !important;
+    background-color: white;
+}
+
+@page{
+    margin :0;
+    border :none;
+}
+
+nav{
+    display: none;
+}
+
+body{
+    background-color: white;
+}
+
+[type="text"],[type="number"],[type="date"]{
+    border: none;
+    height: 100%;
+}
+
+[type="radio"]{
+    display: none;
+}
+
+hr{
+    display: none;
+}
+
+
+.header{
+    display: flex;
+    border: solid 1px black;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 20px 20px 10px 20px;
+    padding: 3px 0 0 3px;
+}
+
+#logoWhite{
+    display: none;
+}
+
+#logoColor{
+    height: 60px;
+    margin: 0 0 40px 0;
+}
+
+.header h1{
+    font-size: 22px;
+    margin: 0 0 2px 50px;
+}
+
+h2{
+    border: 1px solid black;
+    padding: 2px 5px ;
+    font-weight: bold;
+    background-color: #c4c4c4;
+    margin: 20px 0 2px 0;
+}
+
+
+form{
+    margin: 10px 20px 10px 20px;
+}
+
+/* Form Header */
+.form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 30px 20px 10px 35px;
+    height: 100px;
+}
+
+.section-id{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-id{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.section-right{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.section-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 85px;
+}
+
+.input-poste{
+
+    justify-content: space-between;
+    width: 100px;
+}
+
+.input-poste label{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 160px;
+    
+}
+
+.input-poste label::after{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 80px;
+    border: 1px solid black;
+    margin: 0 0 0 20px;
+    
+}
+
+.input-poste [type="radio"]:checked + label::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 80px;
+    border: 3px solid black;
+    background-color: white;
+    content: "X";
+    margin: 0 0 0 18px;
+}
+
+.section-date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    height: 70px;
+    width: 150px;
+    margin-top: 15px;
+    overflow: hidden;
+    padding-top: 2px;
+}
+
+::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.section-date [type="date"]{
+    height: 25px;
+    border: none;
+    
+}
+
+.section-date [type="date"] label{
+    height: 25px;
+    border: none;
+    
+}
+
+/* form-main */
+
+.form-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-main-input-first,
+.form-main-input{
+    margin: 15px 0 15px 0;
+}
+
+.form-main-input-last{
+    margin: 15px 0 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-main-input-radio label,
+.form-main-input label{
+    display: flex;
+    justify-content: flex-start;
+    height: 20px;
+    
+}
+
+
+.form-main-input-last label{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.form-main-input-radio label::before,
+.form-main-input label::before,
+.form-main-input-last label::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 80px;
+    border: 1px solid black;
+    margin: 0 10px 0 20px;
+}
+
+.form-main-input-radio [type="radio"]:checked + label::before,
+.form-main-input [type="radio"]:checked + label::before,
+.form-main-input-last [type="radio"]:checked + label::before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 80px;
+    border: 3px solid black;
+    background-color: white;
+    content: "X";
+    margin: 0 8px 0 18px;
+}
+
+.form-main-input-last [type="text"]{
+    height: 20px;
+}
+
+.week{
+    margin: 0 0 0 50px;
+}
+
+.week p{
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 0 5px 250px;
+}
+
+.week-radio{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 0 30px;
+}
+
+.week-radio label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.week-radio label::after{
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 80px;
+    border: 1px solid black;
+    margin: 2px 10px 2px 20px;
+}
+
+.week-radio [type="radio"]:checked + label::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 80px;
+    border: 3px solid black;
+    background-color: white;
+    content: "X";
+    margin: 0 8px 0 18px;
+}
+
+
+/* form-footer */
+
+.form-footer-input-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.section-drop button{
+    display: none;
+}
+
+.drop-signature{
+    height: 50px;
+    width: 200px;
+}
+
+.drop-signature p{
+    display: none;
+}
+
+.drop-signature span{
+    display: none;
+}
+
+.drop-signature [type="file"]{
+    display: none;
+}
+
+.drop-signature label{
+    display: none;
+}
+
+.drop-signature img{
+    height: 100%;
+    width: 100%;
+}
+
+.plop{
+    color: white;
+}
+
+.form-footer-input{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 25px;
+    width: 400px;
+}
+
+.form-footer-input div:nth-child(2){
+    margin-top: 50px;
+}
+
+.form-footer-input div:nth-child(3){
+    position: absolute;
+    margin: 25px 0 0 10px;
+}
+
+.boss_sign_tittle{
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px 5px ;
+    font-weight: bold;
+    background-color: #c4c4c4;
+}
+
+
+.form_footer_section_boss_sign_grid{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form_footer_section_boss_sign_grid_case{
+    border: 1px solid black;
+    width: 300px;
+    padding: 5px;
+}
+
+.form_footer_section_boss_sign_grid_case p:nth-child(1){
+    margin: 0 0 2px 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.form_footer_section_boss_sign_grid_case p:nth-child(2){
+    margin: 0 0 2px 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.form_footer_section_boss_sign_validate{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form_footer_section_boss_sign_validate_input label{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-family: "Times New Roman", sans-serif;
+    text-align: center;
+}
+
+.form_footer_section_boss_sign_validate_input label::before{
+    content: "";
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    margin: 0 5px 0 5px;
+}
+
+.form_footer_section_boss_sign_grid_case p:nth-child(4){
+    margin: 5px 0 50px 5px;
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: bold;
+    text-underline-offset: 3px;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.form_footer_section_boss_sign_grid_case p:nth-child(5){
+    margin: 0 10px 5px 10px;
+    padding: 5px 0px 30px 5px;
+    border: 1px solid black;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+}
+
+.form_footer_section_boss_sign_footer{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px 5px 20px;
+}
+
+.form_footer_section_boss_sign_footer p{
+    font-family: Courier, monospace;
+    margin: 0 0 1px 0;
+    font-size: 10px;
+    font-style: italic;
+    word-spacing: 5px;
+}
+
+.form_footer_section_boss_sign_footer_grid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form_footer_section_boss_sign_footer_grid div{
+    font-family: "CG Omega", sans-serif;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    height: 12px;
+    
+}
+
+.form_footer_section_boss_sign_footer_grid:nth-child(2){
+    border-left: 1px solid black;
+    
+}
+
+.form_footer_section_boss_sign_footer_div2{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.form_footer_section_boss_sign_footer_div5{
+    padding-left: 50px;
+    padding-right: 50px;
+    white-space: nowrap;
+}
+
+
+
