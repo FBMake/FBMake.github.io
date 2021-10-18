@@ -101,17 +101,69 @@
         let markers = [];
 
         searchControl.on("results", function (data) {
-          markers = [];
-          console.log("data", data);
-          results.clearLayers();
-          // several results as several towns with same name (like)
-          for (var i = data.results.length - 1; i >= 0; i--) {
-            const result = data.results[i];
-            const marker = L.marker(result.latlng);
-            markers = [...markers, L.marker(marker)];
-            results.addLayer(marker.bindPopup(data.text));
+            markers = [];
+            results.clearLayers();
+            console.log(centerMarker);
+            console.log(data);
+
+            let centerMarkerLatlng = centerMarker.getLatLng()
+            let dataLatLng = data.latlng
+            let zoneCheck = chekRadius(centerMarkerLatlng,dataLatLng);
+
+            let popupdata = new L.Popup()
+
+            popupdata.setLatLng(data.latlng)
+            popupdata.setContent(zoneCheck)
+            
+            popupdata.addTo(results)
+          });
+          
+          function chekRadius(cencenterMarkerLatlnger,dataLatLng){
+            let result = cencenterMarkerLatlnger.distanceTo(dataLatLng) / 1000
+            console.log(result);
+            if (result > 0 && result < 10) {
+              return "Zone 1"
+            }
+            if (result >= 10 && result < 20) {
+              return "Zone 2"
+            }
+            if (result >= 20 && result < 30) {
+              return "Zone 3"
+            }
+            if (result >= 30 && result < 40) {
+              return "Zone 4"
+            }
+            if (result >= 40 && result < 50) {
+              return "Zone 5"
+            }
+            if (result >= 50 && result < 60) {
+              return "Zone 6"
+            }
+            if (result >= 60 && result < 70) {
+              return "Zone 7"
+            }
+            if (result >= 70 && result < 80) {
+              return "Zone 8"
+            }
+            if (result >= 80 && result < 90) {
+              return "Zone 9"
+            }
+            if (result >= 90 && result < 100) {
+              return "Zone 10"
+            }
+            if (result >= 100 && result < 110) {
+              return "Zone 11"
+            }
+            if (result >= 110 && result < 120) {
+              return "Zone 12"
+            }
+            if (result >= 120 && result < 130) {
+              return "Zone 13"
+            }
+            if (result >= 130 && result < 140) {
+              return "Zone 14"
+            }
           }
-        });
 
         //Bp localisation
 
@@ -124,8 +176,9 @@
 
         L.marker([49.369900, 1.094159], { icon: VFico }).addTo(map)
     .bindPopup('VHFN Rouen');
-        L.marker([49.487084, 0.147129], { icon: VFico }).addTo(map)
+        let centerMarker = L.marker([49.487084, 0.147129], { icon: VFico }).addTo(map)
     .bindPopup('VHFN Le Havre');
+        L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 130000}).addTo(map).bindPopup('Zone 13');
         L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 120000}).addTo(map).bindPopup('Zone 12');
         L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 110000}).addTo(map).bindPopup('Zone 11');
         L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 100000}).addTo(map).bindPopup('Zone 10');
