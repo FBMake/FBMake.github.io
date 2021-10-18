@@ -95,8 +95,6 @@
           searchControl.on("results", function (data) {
             markers = [];
             results.clearLayers();
-            console.log(centerMarker);
-            console.log(data);
 
             let centerMarkerLatlng = centerMarker.getLatLng()
             let dataLatLng = data.latlng
