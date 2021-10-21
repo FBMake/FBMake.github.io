@@ -7,6 +7,7 @@
 
 body{
   font-family: 'Roboto',Helvetica, sans-serif;
+  background-color: #e5e5f7;
 }
 
 /*    Header    */
@@ -81,8 +82,12 @@ div.leaflet-popup-tip,
 div.leaflet-popup-content-wrapper {
     background: #009fe3;
     color: #ffffff;
-    opacity: 0.6;
+    opacity: 0.9;
   }
+
+.leaflet-container a.leaflet-popup-close-button{
+  color: #ffffff !important;
+}
 
 div.leaflet-popup-content {
   font-family:'Roboto',Helvetica, sans-serif;
