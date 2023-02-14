@@ -10,11 +10,8 @@ function initialize() {
     map.addLayer(osmLayer);
 
     var VFico = L.icon({
-        iconUrl: "src/VFIco.png",
-        shadowUrl: "src/VFIco-shadow.png",
-        iconSize: [37, 37],
-        shadowSize:   [76, 29],
-        shadowAnchor: [20, 10]
+        iconUrl: "src/homeToken.png",
+        iconSize: [30, 30],
     });
 
     //search tool

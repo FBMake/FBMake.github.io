@@ -1,7 +1,9 @@
 function initialize() {
   
   
-    var map = L.map('map').setView([49.369987, 1.094129], 8); // LIGNE 18
+    var map = L.map('map').setView([49.158764, -0.322436], 8); // LIGNE 18
+
+    //49.158764076405774, -0.32243687115737435
 
     var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { // LIGNE 20
         attribution: '© OpenStreetMap contributors',
@@ -96,25 +98,37 @@ function initialize() {
 
     //VFHN Marker
 
-    let centerMarker = L.marker([49.369900, 1.094159], { icon: VFico }).addTo(map).bindPopup('VHFN Rouen');
+    let centerMarker = L.marker([49.158764, -0.322436], { icon: VFico }).addTo(map).bindPopup('VHFN Rouen');
 
-    var Z9 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 90000}).addTo(map).bindPopup('Zone 09'),
+    var 
 
-    Z8 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 80000}).addTo(map).bindPopup('Zone 08'),
+    Z14 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 140000}).addTo(map).bindPopup('Zone 14'),
 
-    Z7 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 70000}).addTo(map).bindPopup('Zone 07'),
+    Z13 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 130000}).addTo(map).bindPopup('Zone 13'),
 
-    Z6 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 60000}).addTo(map).bindPopup('Zone 06'),
+    Z12 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 120000}).addTo(map).bindPopup('Zone 12'),
 
-    Z5 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 50000}).addTo(map).bindPopup('Zone 05'),
+    Z11 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 110000}).addTo(map).bindPopup('Zone 11'),
 
-    Z4 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 40000}).addTo(map).bindPopup('Zone 04'),
+    Z10 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 100000}).addTo(map).bindPopup('Zone 10'),
 
-    Z3 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 30000}).addTo(map).bindPopup('Zone 03'),
+    Z9 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 90000}).addTo(map).bindPopup('Zone 09'),
 
-    Z2 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 20000}).addTo(map).bindPopup('Zone 02'),
+    Z8 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 80000}).addTo(map).bindPopup('Zone 08'),
 
-    Z1 = L.circle([49.369900, 1.094159], {color: "#f03",opacity: 0.2,fillOpacity: 0, radius: 10000}).addTo(map).bindPopup('Zone 01');
+    Z7 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 70000}).addTo(map).bindPopup('Zone 07'),
+
+    Z6 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 60000}).addTo(map).bindPopup('Zone 06'),
+
+    Z5 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 50000}).addTo(map).bindPopup('Zone 05'),
+
+    Z4 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 40000}).addTo(map).bindPopup('Zone 04'),
+
+    Z3 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 30000}).addTo(map).bindPopup('Zone 03'),
+
+    Z2 = L.circle([49.158764, -0.322436], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 20000}).addTo(map).bindPopup('Zone 02'),
+
+    Z1 = L.circle([49.158764, -0.322436], {color: "#f03",opacity: 0.2,fillOpacity: 0, radius: 10000}).addTo(map).bindPopup('Zone 01');
 
     function onLocationFound(e) {
         var radius = e.accuracy;
