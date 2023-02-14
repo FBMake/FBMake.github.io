@@ -96,7 +96,7 @@ function initialize() {
 
     //VFHN Marker
 
-    let centerMarker = L.marker([49.369900, 1.094159], { icon: VFico }).addTo(map).bindPopup('VHFN Rouen');
+    let centerMarker = L.marker([49.369900, 1.094159], { icon: VFico }).addTo(map).bindPopup('VF Rouen');
 
     var Z9 = L.circle([49.369900, 1.094159], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 90000}).addTo(map).bindPopup('Zone 09'),
 

@@ -94,9 +94,9 @@ function initialize() {
 
 
     L.marker([49.369900, 1.094159], { icon: VFico }).addTo(map)
-.bindPopup('VHFN Rouen');
+.bindPopup('VF Rouen');
     let centerMarker = L.marker([49.487084, 0.147129], { icon: VFico }).addTo(map)
-.bindPopup('VHFN Le Havre');
+.bindPopup('VF Le Havre');
     L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 130000}).addTo(map).bindPopup('Zone 13');
     L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 120000}).addTo(map).bindPopup('Zone 12');
     L.circle([49.487084, 0.147129], {color: "blue",opacity: 0.2,fillOpacity: 0, radius: 110000}).addTo(map).bindPopup('Zone 11');

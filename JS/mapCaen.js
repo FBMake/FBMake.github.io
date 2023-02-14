@@ -98,7 +98,7 @@ function initialize() {
 
     //VFHN Marker
 
-    let centerMarker = L.marker([49.158764, -0.322436], { icon: VFico }).addTo(map).bindPopup('VHFN Rouen');
+    let centerMarker = L.marker([49.158764, -0.322436], { icon: VFico }).addTo(map).bindPopup('VF Caen');
 
     var 
 
